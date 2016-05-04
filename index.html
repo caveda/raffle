@@ -1,48 +1,37 @@
 <!doctype html>
 <html>
  <head>
- <title>Raffle</title>
+ <title>Giveaway</title>
 
  <meta charset="utf-8" />
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
- <style>
+  <!-- JQUERY -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript" src="script.js"></script>
 
- body {
- font-family:Verdana, Geneva, sans-serif;
+</head>
 
- }
+<body>
 
- 	 	 #box {
- 	 	 	 width:200px;
- 	 	 	 height:200px;
- 	 	 	 background-color:red;
- 	 	 	 display:none;
- 	 	 	 position:relative;
- 	 	 }
+ <h1>Configure your give away session</h1>
 
- 	 	 .bold {
- 	 	 	 font-weight:bold;
- 	 	 }
-
- </style>
-
-
- </head>
-
- <body>
-
- <h1>Test your reactions!</h1>
-
- <p>Click on the boxes and circles as quickly as you can!</p>
-
- <p class="bold">Your time: <span id="time">0</span>s</p>
-
- <div id="box"></div>
+ <p>First select the numbers of participants</p>
+ First number: 
+ <input id="first_number" placeholder="type number..."/>
+ <br>
+ <br>
+ Last number: 
+ <input id="last_number" placeholder="type number...">
+    
+ <br>
+ <br>
+ <input id="start_button" type="button" value="begin" onclick="startRaffle();">  
+ <p class="bold">The winner is: <textarea id="winner_number">0</textarea></p>
 
 
- <script type="text/javascript" src="script.js"></script>
+ <!-- MY SCRIPT -->
+ <script type="text/javascript" src="script.js"></script> 
 
- </body>
+</body>
 </html>
