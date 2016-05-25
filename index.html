@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Giveaway</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+     
+  <!-- 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+JQUERY -->
+</head>
+
+<body>
+
+ <h1>Configure your give away session</h1>
+
+ <p>First select the numbers of participants</p>
+ First number: 
+ <input id="first_number" placeholder="type number..."/>
+ <br>
+ <br>
+ Last number: 
+ <input id="last_number" placeholder="type number...">
+    
+ <br>
+ <br>
+ <input id="start_button" type="button" value="begin" onclick="onStartRaffleButton();">  
+ <p >Gifts list: <br>
+ <textarea id="gift_list" rows="10" cols="70" placeholder="Enter here the list of gifts. Each line is a gift ..."></textarea>
+ </p>
+ <br>
+ <hr>
+
+ <div id="result_div" style="display: none;">    
+ <input id="next_button" type="button" value="next" onclick="onNextWinnerButton();">  
+ <h2>Results:</h2>
+ <br>
+ <br>
+ <div id="winner_number" style="width: 100%;" class="winner_number">00</div>
+ <br>
+ Has won a&nbsp; 
+ <h4>
+ <div id="winner_gift" style="width: 100%;"></div>
+ </h4> 
+ </div>
+
+ <!-- SCRIPT EXTERNAL DEPENDENCIES -->
+ <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+    
+ <!-- MY SCRIPT -->
+ <script type="text/javascript" src="script.js"></script> 
+ 
+    
+</body>
+</html>
