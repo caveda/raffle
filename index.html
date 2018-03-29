@@ -1,37 +1,96 @@
 <!doctype html>
-<html>
+<html lang="en">
  <head>
- <title>Giveaway</title>
+ <title>Raffle</title>
 
  <meta charset="utf-8" />
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
+     
+ <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
 
-  <!-- JQUERY -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript" src="script.js"></script>
-
+ <!-- Bootstrap -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+ 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
- <h1>Configure your give away session</h1>
+    <div class="container">
 
- <p>First select the numbers of participants</p>
- First number: 
- <input id="first_number" placeholder="type number..."/>
- <br>
- <br>
- Last number: 
- <input id="last_number" placeholder="type number...">
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->    
     
+ <div id="setup_div" style="display: block;">    
+     <h1>Configure your give away session</h1>
+
+     <p>First select the numbers of participants</p>
+     First number: 
+     <input id="first_number" placeholder="type number..."/>
+     <br>
+     <br>
+     Last number: 
+     <input id="last_number" placeholder="type number...">
+
+     <br>
+     <br>
+     <input id="start_button" type="button" value="begin" onclick="onStartRaffleButton();">  
+     <p >Gifts list: <br>
+     <textarea id="gift_list" rows="10" cols="70" placeholder="Enter here the list of gifts. Each line is a gift ..."></textarea>
+     </p>
+     <br>
+     <hr>
+ </div>
+    
+ <div id="result_div" style="display: none;">    
+ <input id="next_button" type="button" value="next" onclick="onNextWinnerButton();">  
+ <h2>Results:</h2>
  <br>
  <br>
- <input id="start_button" type="button" value="begin" onclick="startRaffle();">  
- <p class="bold">The winner is: <textarea id="winner_number">0</textarea></p>
+ <div id="winner_number" style="width: 100%;" class="odometer">00</div>
+ <br>
+ Has won a&nbsp; 
+ <h4>
+ <div id="winner_gift" style="width: 100%;"></div>
+ </h4> 
+ </div>
 
-
+ 
+     
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="js/bootstrap.min.js"></script>
+    
+ <!-- SCRIPT EXTERNAL DEPENDENCIES -->
+ <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+    
  <!-- MY SCRIPT -->
- <script type="text/javascript" src="script.js"></script> 
-
+ <script type="text/javascript" src="js/script.js"></script> 
+ 
+    
 </body>
 </html>
